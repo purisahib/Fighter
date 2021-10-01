@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SimpleGun : MonoBehaviour
+{
+    [SerializeField] private Button fire;
+    [SerializeField] private GameObject bullet_Prefab;
+    // private void Start() {
+    //     fire.onClick.AddListener(()=>
+    //     {
+    //         Fire();
+    //     });
+    // }
+    private void Update() {
+        if(Input.GetButtonDown("Fire1"))
+        Fire();
+    }
+    private void Fire () {
+        Instantiate(bullet_Prefab, gameObject.transform);
+        
+    }
+}
